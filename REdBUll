@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Red Bull</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="style.css"
+    />
+    <script src="myscripts.js"></script>
+</head>
+<body>
+    <header>
+    <h1>The Red Bull Team</h1>
+    </header>
+    <article id="article1">
+    <h2 id="secondTitle"> Login</h2>
+    <input id="theInput" type="text" placeholder="Username"/><br>
+    <input id="theInput2" type="text" placeholder="Email"/><br>
+    <input id="theInput3" type="password" placeholder="Password" width="30"/><br>
+    <button id="button1">Login</button>
+    <p id="p1">Don't have an account yet?</p>
+    <a href="Register.html" target="_self">
+    <button id="button2">Register</button>
+    </a>
+</article>
+    <h2 id="thirdTitle">The beggining of the Red Bull team</h2>
+    <img src="https://www.webmarketing-conseil.fr/wp-content/uploads/2013/08/red-bull-f1.jpg" alt="Redbull car">
+
+</body>
+</html>
