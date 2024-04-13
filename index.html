@@ -360,5 +360,64 @@ Scrie cu degetele pe cari le sărut.
 		</h1>
 		<iframe width="426" height="240" src="https://www.youtube-nocookie.com/embed/-Mp0gzWj0OY?si=AcgcBWSxwcsMq2J9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 	</div>
+	    <div>
+        <div id="calculator">
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <div class="wrapper">
+              <div class="heading">
+                <h1>Love ♥ Calculator</h1>
+              </div>
+              <div class="maincontent">
+                <div>
+                  <label for="yourname">*Numele tau</label><br />
+                  <input
+                    type="text"
+                    id="yourname"
+                    placeholder="Numele tau"
+                    spellcheck="false"
+                    maxlength="30"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="theirname">*Numele lui/ei</label><br />
+                  <input
+                    type="text"
+                    id="theirname"
+                    placeholder="Numele lui/ei"
+                    spellcheck="false"
+                    maxlength="30"
+                    required
+                  />
+                </div>
+              </div>
+              <button type="submit" id="button">❤ CALCULEAZA ❤</button>
+        
+              <div class="result">
+                <h2>Rezultat</h2>
+                <div class="divider"></div>
+                <p id="yourlovescoreis"></p>
+                <h1 id="score"></h1>
+                <p id="loveinfo"></p>
+                <p
+                  id="reload"
+                  style="
+                    cursor: pointer;
+                    display: none;
+                    margin-top: 30px;
+                    font-weight: 700;
+                  "
+                  onClick="window.location.reload();"
+                >
+                  ↺ Re Calculeaza
+                </p>
+              </div>
+            </div>
+            </div>
+            <script type="text/javascript"></script>
+            <script src="app.js"></script>
+        </div>
+    </div>
 </body>
 </html>
