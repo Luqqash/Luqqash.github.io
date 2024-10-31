@@ -9,74 +9,80 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: linear-gradient(45deg, #ff80aa, #c7004c);
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        h1 {
-            font-size: 54px;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-        
-        /* Landing Page Styles */
-        .landing {
-            text-align: center;
-            padding: 50px;
-            background: linear-gradient(120deg, #ff80aa, #ffe0f0);
-            min-height: 100vh;
-            color: white;
-        }
-        .button {
-            padding: 15px 30px;
-            margin: 10px;
-            border: none;
-            border-radius: 10px;
-            background-color: #ff80aa;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .button:hover {
-            background-color: #c7004c;
-        }
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-        /* Content Page Styles */
-        .section {
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #fff;
-            color: #333;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .section img {
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-        
-        /* Footer Styles */
-        footer {
-            background-color: #ae0606;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
+h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.navbar button {
+    background-color: #ff758c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.navbar button:hover {
+    background-color: #ff4f72;
+}
+
+footer {
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1em;
+    }
+    
+    .navbar button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+    
+    footer {
+        font-size: 0.8em;
+    }
+}
+            
+            
+            
     </style>
 </head>
 <body>
