@@ -79,7 +79,7 @@ section {
     text-align: center;
     font-size: 2.8em;
     margin-bottom: 30px;
-    color: #4a90e2;
+    color: #ffffff;
 }
 
 .featured-books-content {
@@ -175,26 +175,62 @@ section {
     margin-bottom: 10px;
 }
 
-/* Search Bar */
-input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
+/* Search bar styles */
+.search-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#searchBar {
+    width: 50%;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Transparent border */
+    border-radius: 30px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    color: white; /* Text color */
     outline: none;
-    background: rgba(255, 255, 255, 0.15);
-    color: #fff;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
 }
 
-input[type="text"]::placeholder {
-    color: #ddd;
+#searchBar:focus {
+    border-color: #4CAF50; /* Green color on focus */
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on focus */
 }
 
-input[type="text"]:focus {
-    background: rgba(255, 255, 255, 0.3);
+#searchResults {
+    margin-top: 20px;
+    text-align: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+.search-result {
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    color: white; /* White text */
+}
+
+.search-result a {
+    text-decoration: none;
+    color: #4CAF50; /* Green links */
+}
+
+.search-result h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.search-result p {
+    margin: 5px 0 0;
+    color: rgba(255, 255, 255, 0.7); /* Lighter text color */
+}
+
 
 /* Footer */
 .footer-section {
