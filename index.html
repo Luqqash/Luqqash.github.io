@@ -129,46 +129,5 @@
         </footer>
     </div>
 
-    <script>
-        // Sample book data (title, author, img, link)
-        const books = [
-            { title: "Book 1", author: "Author Name", imgSrc: "book1.jpg", link: "book1.html" },
-            { title: "Book 2", author: "Author Name", imgSrc: "book2.jpg", link: "book2.html" },
-            { title: "Book 3", author: "Author Name", imgSrc: "book3.jpg", link: "book3.html" },
-            { title: "Book 4", author: "Jane Doe", imgSrc: "book4.jpg", link: "book4.html" },
-            { title: "Book 5", author: "John Smith", imgSrc: "book5.jpg", link: "book5.html" }
-        ];
-
-        // Function to search books
-        function searchBooks() {
-            const query = document.getElementById('searchBar').value.toLowerCase(); // Get search query
-            const results = document.getElementById('searchResults'); // The results container
-            results.innerHTML = ""; // Clear previous results
-
-            // Filter books by title or author
-            const filteredBooks = books.filter(book => 
-                book.title.toLowerCase().includes(query) || 
-                book.author.toLowerCase().includes(query)
-            );
-
-            // Show results or no results message
-            if (filteredBooks.length === 0) {
-                results.innerHTML = "<p>No books found matching your search.</p>";
-            } else {
-                filteredBooks.forEach(book => {
-                    const resultItem = document.createElement('div');
-                    resultItem.classList.add('result-item');
-                    resultItem.innerHTML = `
-                        <a href="${book.link}">
-                            <img src="${book.imgSrc}" alt="${book.title}">
-                            <h4>${book.title}</h4>
-                            <p>By ${book.author}</p>
-                        </a>
-                    `;
-                    results.appendChild(resultItem);
-                });
-            }
-        }
-    </script>
 </body>
 </html>
