@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Detail</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+</head>
+
+<body>
+
+    <div class="book-detail-container">
+        <!-- Book Info Section -->
+        <div class="book-info-section">
+            <!-- Left Side: Book Image -->
+            <div class="book-image">
+                <img src="book-cover-image.jpg" alt="Book Cover"> <!-- Replace with your book image -->
+            </div>
+
+            <!-- Right Side: Book Title, Author -->
+            <div class="book-details">
+                <h1 class="book-title">Book Title</h1>
+                <p class="book-author">by Author Name</p>
+            </div>
+        </div>
+
+        <!-- Book Description Section -->
+        <div class="book-description">
+            <h2>Description</h2>
+            <p>
+                This is the book description. It gives an overview of the story, themes, characters, and key points of
+                interest. It's written in a captivating way to entice potential readers. It's a thrilling journey filled
+                with suspense and adventure. Get ready for a story like no other!
+            </p>
+        </div>
+
+        <!-- Review Submission Form -->
+        <div class="review-form">
+            <h3>Share Your Opinion</h3>
+            <form id="review-form">
+                <textarea name="review" placeholder="Write your review here..." rows="5" required></textarea>
+                <button type="submit" class="submit-review-btn">Submit Review</button>
+            </form>
+        </div>
+
+        <!-- Display Submitted Reviews -->
+        <div id="reviews-section">
+           
+            <!-- Reviews will be appended here dynamically -->
+        </div>
+
+        <!-- Back Button -->
+        <a href="index.html" class="back-button">Back to Books</a>
+
+
+    </div>
+
+    <script>
+        // JavaScript to handle form submission and display reviews
+        document.getElementById('review-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting to a new page
+
+            // Get the review text from the textarea
+            const reviewText = document.querySelector('textarea[name="review"]').value;
+
+            // Create a new review element
+            const newReview = document.createElement('div');
+            newReview.classList.add('review');
+            newReview.innerHTML = `<p>"${reviewText}"</p><p class="reviewer">- You</p>`;
+
+            // Append the new review to the reviews section
+            document.getElementById('reviews-section').appendChild(newReview);
+
+            // Clear the textarea after submission
+            document.querySelector('textarea[name="review"]').value = '';
+        });
+    </script>
+
+</body>
+
+</html>
