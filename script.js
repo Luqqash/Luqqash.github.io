@@ -18,7 +18,6 @@ function searchBooks() {
     const filteredBooks = books.filter(book => 
         book.title.toLowerCase().includes(query) || book.author.toLowerCase().includes(query)
     );
-
     if (filteredBooks.length > 0) {
         // Display matching books
         filteredBooks.forEach(book => {
