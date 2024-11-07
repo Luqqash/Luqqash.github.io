@@ -176,6 +176,7 @@ section {
 }
 
 /* Search bar styles */
+/* Search bar styles */
 .search-section {
     margin-top: 40px;
     text-align: center;
@@ -195,8 +196,8 @@ section {
 }
 
 #searchBar:focus {
-    border-color: #4CAF50; /* Green color on focus */
     background-color: rgba(255, 255, 255, 0.2); /* Slightly darker background on focus */
+    color: white; /* Keeping the text color white */
 }
 
 #searchResults {
@@ -218,7 +219,7 @@ section {
 
 .search-result a {
     text-decoration: none;
-    color: #4CAF50; /* Green links */
+    color: white; /* White links */
 }
 
 .search-result h3 {
