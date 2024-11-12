@@ -1,6 +1,6 @@
 // Sample data for books
 const books = [
-    { title: 'Book 1', author: 'Author Name 1', link: 'book1.html' },
+    { title: 'Diabolica', author: 'S.J. Kincaid', link: 'book1.html' },
     { title: 'Book 2', author: 'Author Name 2', link: 'book2.html' },
     { title: 'Book 3', author: 'Author Name 3', link: 'book3.html' },
     { title: 'Book 4', author: 'Author Name 4', link: 'book4.html' },
