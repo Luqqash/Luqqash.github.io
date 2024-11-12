@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Book Detail</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="styles.css"> 
 </head>
 
 <body>
 
     <div class="book-detail-container">
-        <!-- Book Info Section -->
+        
         <div class="book-info-section">
-            <!-- Left Side: Book Image -->
+         
             <div class="book-image">
-                <img src="book-cover-image.jpg" alt="Book Cover"> <!-- Replace with your book image -->
+                <img src="book-cover-image.jpg" alt="Book Cover">
             </div>
 
-            <!-- Right Side: Book Title, Author -->
+          
             <div class="book-details">
                 <h1 class="book-title">Book Title</h1>
                 <p class="book-author">by Author Name</p>
@@ -46,24 +46,22 @@
         </div>
         
 
-        <!-- Display Submitted Reviews -->
         <div id="reviews-section">
-            <!-- Reviews will be appended here dynamically -->
+        
         </div>
-        <!-- Back Button -->
+    
         <a href="index.html" class="back-button">Back to Books</a>
     </div>
     <script>
-        // Get a unique book identifier (could be set dynamically for each book page)
-        const bookId = 'book2'; // Replace 'book1' with a variable that identifies the current book
-        
-        // Function to load existing reviews for the current book from local storage
+       
+        const bookId = 'book2'; 
+       
         function loadReviews() {
             const storedReviews = JSON.parse(localStorage.getItem(bookId)) || [];
             const reviewsSection = document.getElementById('reviews-section');
-            reviewsSection.innerHTML = ''; // Clear existing reviews
+            reviewsSection.innerHTML = ''; 
         
-            // Loop through stored reviews and display them
+           
             storedReviews.forEach(review => {
                 const reviewElement = document.createElement('div');
                 reviewElement.classList.add('review');
@@ -75,23 +73,23 @@
             });
         }
         
-        // Load reviews on page load
+   
         window.onload = loadReviews;
         
         document.getElementById('review-form').addEventListener('submit', function(event) {
             event.preventDefault();
         
             const reviewText = document.querySelector('textarea[name="review"]').value;
-            const reviewerName = document.querySelector('.reviewer-name-field').value; // Updated selector for name field
+            const reviewerName = document.querySelector('.reviewer-name-field').value; 
             const storedReviews = JSON.parse(localStorage.getItem(bookId)) || [];
             
-            // Add the new review with a timestamp to make each review unique
-            storedReviews.push({ text: reviewText, name: reviewerName, id: Date.now() }); // Added unique id
+           
+            storedReviews.push({ text: reviewText, name: reviewerName, id: Date.now() }); 
             localStorage.setItem(bookId, JSON.stringify(storedReviews));
         
             loadReviews();
             document.querySelector('textarea[name="review"]').value = '';
-            document.querySelector('.reviewer-name-field').value = ''; // Clear name field after submission
+            document.querySelector('.reviewer-name-field').value = ''; 
         });
     </script>
 
