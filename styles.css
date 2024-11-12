@@ -293,9 +293,9 @@ body {
 
 /* Book Image */
 .book-image {
-    width: 30%; /* or a percentage that makes sense for your layout */
-    max-width: 300px; /* set an appropriate max width */
-    margin: auto; /* center the image if needed */
+    width: 100%; /* or a percentage that makes sense for your layout */
+    max-width: 200px; /* set an appropriate max width */
+    margin: 0 auto; /* center the image if needed */
 }
 
 .book-image img {
