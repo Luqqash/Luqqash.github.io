@@ -293,15 +293,17 @@ body {
 
 /* Book Image */
 .book-image {
-    width: 20%;
+    width: 30%; /* or a percentage that makes sense for your layout */
+    max-width: 300px; /* set an appropriate max width */
+    margin: auto; /* center the image if needed */
 }
 
 .book-image img {
-    width: 100%;
+    width: 100%; /* ensure the image fills its container */
     border-radius: 10px;
     transition: transform 0.3s;
+    height: auto; /* maintain aspect ratio */
 }
-
 .book-image img:hover {
     transform: scale(1.05);
 }
