@@ -293,7 +293,7 @@ body {
 
 /* Book Image */
 .book-image {
-    width: 40%;
+    width: 20%;
 }
 
 .book-image img {
@@ -343,7 +343,7 @@ body {
     line-height: 1.6;
     color: #ddd;
 }
-
+/* Reviews Section */
 /* Reviews Section */
 .reviews-section {
     margin-top: 30px;
@@ -361,42 +361,52 @@ body {
     margin-bottom: 15px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+.review:hover {
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .reviewer {
-    font-size: 1em;
+    font-size: 1.1em;
     font-style: italic;
-    color: #ddd;
+    color: #bbb;
+    text-align: right;
+    margin-top: 10px;
 }
 
 /* Review Submission Form */
 .review-form {
     margin-top: 40px;
     background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .review-form h3 {
     font-size: 2em;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #fff;
 }
 
-.review-form textarea {
+.review-form textarea,
+.reviewer-name-field {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     font-size: 1.1em;
     color: #fff;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.1);
     border: none;
     border-radius: 8px;
-    resize: vertical;
+    margin-bottom: 15px;
     transition: background 0.3s;
+    resize: vertical;
 }
 
-.review-form textarea:focus {
+.review-form textarea:focus,
+.reviewer-name-field:focus {
     background: rgba(255, 255, 255, 0.2);
     outline: none;
 }
@@ -420,16 +430,73 @@ body {
 /* Back Button */
 .back-button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #4a90e2;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     margin-top: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     transition: background-color 0.3s;
 }
 
 .back-button:hover {
     background-color: #357ab7;
+}
+/* Reviewer Name Field */
+/* Reviewer Name Field (Your Name) */
+/* Reviewer Name Field (Your Name) */
+.review-form .reviewer-name-field {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15); /* Subtle background with transparency */
+    border: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
+}
+
+/* Focus State for the Reviewer Name Field */
+.review-form .reviewer-name-field:focus {
+    background: rgba(255, 255, 255, 0.2); /* Slightly darker background on focus */
+    outline: none; /* Remove default outline */
+}
+
+
+/* Delete Button */
+.delete-review-btn {
+    padding: 8px 16px;
+    background-color: #ff5c5c;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    margin-top: 10px;
+    cursor: pointer;
+    display: none; /* Initially hidden, will show on hover */
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center; /* Center the text inside the button */
+    width: auto;
+}
+
+.delete-review-btn:hover {
+    background-color: #e04a4a;
+    transform: scale(1.05);
+}
+
+/* Reviewer Section - Add padding around the review and name field for a better layout */
+.review {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* This allows positioning of the delete button */
+}
+
+.review:hover .delete-review-btn {
+    display: block; /* Show delete button when the review is hovered */
 }
