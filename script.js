@@ -35,6 +35,3 @@ function searchBooks() {
         searchResults.innerHTML = '<p>No books found matching your search.</p>';
     }
 }
-        searchResults.innerHTML = '<p>No books found matching your search.</p>';
-    }
-}
