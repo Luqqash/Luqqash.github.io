@@ -502,3 +502,9 @@ body {
 .review:hover .delete-review-btn {
     display: block; /* Show delete button when the review is hovered */
 }
+@media(max-width:600px){
+    .book-image{
+        width:80%;
+        max-width:150px;
+    }
+}
